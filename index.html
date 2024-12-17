@@ -185,25 +185,34 @@
             <h2 class="text-center mb-4 animate__animated animate__fadeInUp">Contact Us</h2>
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <form class="animate__animated animate__fadeIn">
+                    <!-- 表单提交到 Formspree -->
+                    <form 
+                        action="https://formspree.io/f/mvgojayk" 
+                        method="POST" 
+                        class="animate__animated animate__fadeIn">
+                        
                         <div class="mb-3">
                             <label for="name" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Input your name" required>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Input your name" required>
                         </div>
+                        
                         <div class="mb-3">
                             <label for="email" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="email" placeholder="Input your E-mail address" required>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Input your E-mail address" required>
                         </div>
+                        
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Input your message"></textarea>
+                            <textarea class="form-control" name="message" id="message" rows="4" placeholder="Input your message" required></textarea>
                         </div>
+                        
                         <button type="submit" class="btn btn-primary w-100">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
     
 
     <!-- 页脚 -->
@@ -217,6 +226,8 @@
     <script>
         // 初始化动画库
         new WOW().init();
+
+
     </script>
 </body>
 </html>
